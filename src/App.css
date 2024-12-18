@@ -448,7 +448,7 @@ country Card
   align-items: center;
   justify-content: space-between;
   margin-bottom: 3.2rem;
-
+  flex-wrap: wrap;
   & .container-card {
     padding: 0.8rem 2.4rem;
     background: linear-gradient(71deg, #080509, #1a171c, #080509);
@@ -456,6 +456,8 @@ country Card
 
   & input {
     height: 3rem;
+    width: 100%;
+    max-width: 200px;
     border-radius: 15px;
     padding-left: 1rem;
     font-family: "urbanist";
@@ -476,6 +478,8 @@ country Card
     -webkit-border-radius: 5rem;
     -moz-border-radius: 5rem;
     -ms-border-radius: 5rem;
+    width: 100%;
+    max-width: 200px;
     -o-border-radius: 5rem;
     font-family: "urbanist";
     font-size: 1.5rem;
@@ -489,12 +493,27 @@ country Card
       padding: 0.6rem 2.4rem;
       border-radius: 5rem;
     }
+    & button {
+      background: #1a171c;
+      color: #fff;
+      padding: 0.8rem 2.4rem;
+      border-radius: 5rem;
+      font-family: "urbanist";
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 0.1rem;
+      text-transform: capitalize;
+      border: none;
+      cursor: pointer;
+      width: 100%; /* Ensures button takes full width on small screens */
+      max-width: 200px; /* Limit width for larger screens */
+    }
   }
 
   & .select-section > option {
     background-color: #080509;
     color: rgba(255, 255, 255, 0.8);
-    padding: 0.6rem 2.4rem;
+    padding: 0.9rem 2.4rem;
     border-radius: 5rem;
     margin-top: 1rem;
   }
